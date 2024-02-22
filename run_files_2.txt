@@ -1,0 +1,36 @@
+python3 -m scripts.external_etl
+python3 -m scripts.make_partitioned_scripts
+python3 -m scripts.etl_2
+python3 -m scripts.transactions_raw_partition_0
+python3 -m scripts.transactions_raw_partition_1
+python3 -m scripts.transactions_raw_partition_2
+python3 -m scripts.transactions_raw_partition_3
+python3 -m scripts.transactions_raw_partition_4
+python3 -m scripts.transactions_raw_partition_5
+python3 -m scripts.transactions_raw_partition_6
+python3 -m scripts.transactions_raw_partition_7
+python3 -m scripts.transactions_raw_partition_8
+python3 -m scripts.transactions_raw_partition_9
+python3 -m scripts.transactions_raw_partition_10
+python3 -m scripts.transactions_raw_partition_11
+python3 -m scripts.transactions_raw_partition_12
+python3 -m scripts.transactions_transform_partition_min_0
+python3 -m scripts.transactions_transform_partition_min_1
+python3 -m scripts.transactions_transform_partition_min_2
+python3 -m scripts.transactions_transform_partition_min_3
+python3 -m scripts.transactions_transform_partition_min_4
+python3 -m scripts.transactions_transform_partition_min_5
+python3 -m scripts.transactions_transform_partition_min_6
+python3 -m scripts.transactions_transform_partition_min_7
+python3 -m scripts.transactions_transform_partition_min_8
+python3 -m scripts.transactions_transform_partition_min_9
+python3 -m scripts.transactions_transform_partition_min_10
+python3 -m scripts.transactions_transform_partition_min_11
+python3 -m scripts.transactions_transform_partition_min_12
+find . -name '*transactions_consumers*' -delete
+find . -name '*transactions_merchants*' -delete
+find . -name '*transactions_raw_partition*' -delete
+find . -name '*transactions_transform_partition*' -delete
+find . -name '*transactions_whole*' -delete
+find . -name '*transactions_distinct*' -delete
+find . -name '*transactions_ohe_small*' -delete

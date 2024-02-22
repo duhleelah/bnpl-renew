@@ -1,0 +1,85 @@
+python3 -m scripts.external_etl
+python3 -m scripts.make_partitioned_scripts
+python3 -m scripts.etl
+python3 -m scripts.internal_joins
+python3 -m scripts.transactions_raw_partition_0
+python3 -m scripts.transactions_raw_partition_1
+python3 -m scripts.transactions_raw_partition_2
+python3 -m scripts.transactions_raw_partition_3
+python3 -m scripts.transactions_raw_partition_4
+python3 -m scripts.transactions_raw_partition_5
+python3 -m scripts.transactions_raw_partition_6
+python3 -m scripts.transactions_raw_partition_7
+python3 -m scripts.transactions_raw_partition_8
+python3 -m scripts.transactions_raw_partition_9
+python3 -m scripts.transactions_raw_partition_10
+python3 -m scripts.transactions_raw_partition_11
+python3 -m scripts.transactions_raw_partition_12
+python3 -m scripts.transactions_transform_partition_0
+python3 -m scripts.transactions_transform_partition_1
+python3 -m scripts.transactions_transform_partition_2
+python3 -m scripts.transactions_transform_partition_3
+python3 -m scripts.transactions_transform_partition_4
+python3 -m scripts.transactions_transform_partition_5
+python3 -m scripts.transactions_transform_partition_6
+python3 -m scripts.transactions_transform_partition_7
+python3 -m scripts.transactions_transform_partition_8
+python3 -m scripts.transactions_transform_partition_9
+python3 -m scripts.transactions_transform_partition_10
+python3 -m scripts.transactions_transform_partition_11
+python3 -m scripts.transactions_transform_partition_12
+python3 -m scripts.transactions_transform_partition_13
+python3 -m scripts.transactions_transform_partition_14
+python3 -m scripts.transactions_transform_partition_15
+python3 -m scripts.transactions_transform_partition_16
+python3 -m scripts.transactions_transform_partition_17
+python3 -m scripts.transactions_transform_partition_18
+python3 -m scripts.transactions_transform_partition_19
+python3 -m scripts.transactions_transform_partition_20
+python3 -m scripts.transactions_transform_partition_21
+python3 -m scripts.transactions_transform_partition_22
+python3 -m scripts.transactions_transform_partition_23
+python3 -m scripts.transactions_transform_partition_24
+python3 -m scripts.transactions_transform_partition_25
+python3 -m scripts.transactions_transform_partition_26
+python3 -m scripts.transactions_transform_partition_27
+python3 -m scripts.transactions_transform_partition_28
+python3 -m scripts.transactions_transform_partition_29
+python3 -m scripts.transactions_transform_partition_30
+python3 -m scripts.transactions_transform_partition_31
+python3 -m scripts.transactions_transform_partition_32
+python3 -m scripts.transactions_transform_partition_33
+python3 -m scripts.transactions_transform_partition_34
+python3 -m scripts.transactions_transform_partition_35
+python3 -m scripts.transactions_transform_partition_36
+python3 -m scripts.transactions_transform_partition_37
+python3 -m scripts.transactions_transform_partition_38
+python3 -m scripts.transactions_transform_partition_39
+python3 -m scripts.transactions_transform_partition_40
+python3 -m scripts.transactions_transform_partition_41
+python3 -m scripts.transactions_transform_partition_42
+python3 -m scripts.transactions_transform_partition_43
+python3 -m scripts.transactions_transform_partition_44
+python3 -m scripts.transactions_transform_partition_45
+python3 -m scripts.transactions_transform_partition_46
+python3 -m scripts.transactions_transform_partition_47
+python3 -m scripts.transactions_transform_partition_48
+python3 -m scripts.transactions_transform_partition_49
+python3 -m scripts.transactions_transform_partition_50
+python3 -m scripts.transactions_transform_partition_51
+python3 -m scripts.transactions_transform_partition_52
+python3 -m scripts.transactions_transform_partition_53
+python3 -m scripts.transactions_transform_partition_54
+python3 -m scripts.transactions_transform_partition_55
+python3 -m scripts.transactions_transform_partition_56
+python3 -m scripts.transactions_transform_partition_57
+python3 -m scripts.transactions_transform_partition_58
+python3 -m scripts.transactions_transform_partition_59
+python3 -m scripts.transactions_transform_partition_60
+find . -name '*transactions_consumers*' -delete
+find . -name '*transactions_merchants*' -delete
+find . -name '*transactions_raw_partition*' -delete
+find . -name '*transactions_transform_partition*' -delete
+find . -name '*transactions_whole*' -delete
+find . -name '*transactions_distinct*' -delete
+find . -name '*transactions_ohe_small*' -delete

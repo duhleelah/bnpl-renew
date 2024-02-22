@@ -1,0 +1,7 @@
+find . -name '*transactions_consumers*' -delete
+find . -name '*transactions_merchants*' -delete
+find . -name '*transactions_raw_partition*' -delete
+find . -name '*transactions_transform_partition*' -delete
+find . -name '*transactions_whole*' -delete
+find . -name '*transactions_distinct*' -delete
+find . -name '*transactions_ohe_small*' -delete

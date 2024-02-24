@@ -1,6 +1,6 @@
 # Generic Buy Now, Pay Later Project
 
-** Update: ** Repo is being updated as of 24 Feb 2024 to revisit this project
+**Update:** Repo is being updated as of 24 Feb 2024 to revisit this project
 
 ## Selects the top 100 merchants from a given Buy Now Pay Later Dataset
 

@@ -1,6 +1,6 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/wNN69YNG)
-
 # Generic Buy Now, Pay Later Project
+
+** Update: ** Repo is being updated as of 24 Feb 2024 to revisit this project
 
 ## Selects the top 100 merchants from a given Buy Now Pay Later Dataset
 
@@ -65,4 +65,3 @@
     - `consumer_joined.parquet`: Join `tbl_consumer.csv` and `consumer_user_details.parquet`
     - `consumer_external_join.parquet`: Join consumer_joined and external_joined
     - External Files
-# bnpl-redo

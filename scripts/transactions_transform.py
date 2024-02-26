@@ -6,6 +6,7 @@ from .read import *
 from .join import *
 from .misc_changes import *
 from .ohe import *
+import argparse
 
 DATE_SPLIT = "="
 DATE_IDX = 1
@@ -158,4 +159,14 @@ def transform_batch_order_file_2(start_idx:int,
 
 if __name__ == "__main__":
     # internal_transform_transactions()
-    transform_batch_order_file(0, 10)
+    # transform_batch_order_file(0, 10)
+    parser = argparse.ArgumentParser(description='Process data from ith to jth dataframe')
+    parser.add_argument('from_num', type=int, help='Starting index of the dataframe')
+    parser.add_argument('to_num', type=int, help='Ending index of the dataframe')
+    
+    args = parser.parse_args()
+    
+    from_num = args.from_num
+    to_num = args.to_num
+
+    transform_batch_order_file(from_num, to_num)

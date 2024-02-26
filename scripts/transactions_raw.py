@@ -5,6 +5,7 @@ from .load import *
 from .read import *
 from .join import *
 from .misc_changes import *
+import argparse
 
 def internal_raw_transactions_old(prefix:str="") -> None:
     spark = create_spark()
@@ -82,6 +83,13 @@ def raw_batch_order_file(start_idx:int,
 
 if __name__ == "__main__":
     # internal_raw_transactions()
-    raw_batch_order_file(0, 10)
-    raw_transactons_len = get_transactions_length(RAW_TRANSACTIONS_PATH, False)
-    print(raw_transactons_len)
+    parser = argparse.ArgumentParser(description='Process data from ith to jth dataframe')
+    parser.add_argument('from_num', type=int, help='Starting index of the dataframe')
+    parser.add_argument('to_num', type=int, help='Ending index of the dataframe')
+    
+    args = parser.parse_args()
+    
+    from_num = args.from_num
+    to_num = args.to_num
+
+    raw_batch_order_file(from_num, to_num)

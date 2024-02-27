@@ -28,11 +28,11 @@ def internal_raw_files(prefix:str="") -> None:
 
     # Rename Columns
     print("RENAMING COLUMNS...")
-    consumer_fraud = rename_cols(consumer_fraud, prefix+CONSUMER_FRAUD_COLS_DICT)
-    consumer_user_details = rename_cols(consumer_user_details, prefix+CONSUMER_USER_DETAILS_COLS_DICT)
-    merchant_fraud = rename_cols(merchant_fraud, prefix+MERCHANT_FRAUD_COLS_DICT)
-    tbl_consumer = rename_cols(tbl_consumer, prefix+TBL_CONSUMER_COLS_DICT)
-    tbl_merchants = rename_cols(tbl_merchants, prefix+TBL_MERCHANTS_COLS_DICT)
+    consumer_fraud = rename_cols(consumer_fraud, CONSUMER_FRAUD_COLS_DICT)
+    consumer_user_details = rename_cols(consumer_user_details, CONSUMER_USER_DETAILS_COLS_DICT)
+    merchant_fraud = rename_cols(merchant_fraud, MERCHANT_FRAUD_COLS_DICT)
+    tbl_consumer = rename_cols(tbl_consumer, TBL_CONSUMER_COLS_DICT)
+    tbl_merchants = rename_cols(tbl_merchants, TBL_MERCHANTS_COLS_DICT)
     print("FINISHED RENAMING COLUMNS")
 
     # Save Raw Files

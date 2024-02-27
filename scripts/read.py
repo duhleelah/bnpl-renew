@@ -403,7 +403,7 @@ def read_curated_consumer_external_join(spark:SparkSession, prefix:str="") -> Da
     - Returns
         - PySpark Curated External Join Dataframe
     """
-    return spark.read.parquet(prefix + CURATED_CONSUMER_EXTERNAL_JOIN_PATH, header=True)
+    return spark.read.parquet(prefix + CURATED_EXTERNAL_JOIN_PATH, header=True)
 
 # Need this to read a single order file
 def read_order_datetime_file(path:str, spark:SparkSession, prefix:str="") -> DataFrame:

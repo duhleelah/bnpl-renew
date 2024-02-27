@@ -2,6 +2,7 @@ from .constants import *
 from .external_extract import *
 from pyspark.sql import DataFrame
 import os
+import shutil
 
 def load_external_data(type: str, df: DataFrame, target: str) -> None:
     """
@@ -15,6 +16,15 @@ def load_external_data(type: str, df: DataFrame, target: str) -> None:
     """
 
     if type == CSV:
+        if os.path.exists(target):
+            if os.path.isdir(target):
+                # Remove the directory
+                shutil.rmtree(target)
+                print("Removed Target")
+            else:
+                # Remove the file
+                os.remove(target)
+                print("Removed Target")
         df.to_csv(target, index=False)
 
 def load_external_shape_file(type: str, gdf: gpd.GeoDataFrame, target_path: str) -> None:

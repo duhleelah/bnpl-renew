@@ -16,8 +16,7 @@ PYTHON_CONSOLE_FORMAT = "python3 -m scripts.{}"
 INTERNAL_ETL = ["etl", "internal_joins"]
 INTERNAL_ETL_2 = ["etl_2", "internal_joins"]
 RUN_FIRST = [
-    "external_etl",
-    "make_partitioned_scripts",
+    "external_etl"
 ]
 
 # Delete patterns for windows and linux/mac files
@@ -52,6 +51,10 @@ while read -r line; do
   eval "$line"
 done < {}"""
 
+# Command formats for raw conversion and transformation of transaction data
+TRANSACTIONS_RAW_COMMAND_FRMT = "transactions_raw {} {}"
+TRANSACTIONS_TRANSFORM_COMMAND_FRMT = "transactions_transform {} {}"
+
 def write_run_file(folder:str=TABLES_DIR) -> None:
     """
     Writes the run file used to run the ETL
@@ -61,15 +64,19 @@ def write_run_file(folder:str=TABLES_DIR) -> None:
         - None, but saves the needed files to run the ETL in one shell/batch file
     """
     transactions_length = get_transactions_length(folder)
-    # Extract the needed join scripts with transactions
-    transactions_raw_partitions = [TRANSACTIONS_RAW_NAME_FORMAT.format(i//TRANSACTIONS_RAW_NUM_FILES)[:REMOVE_PY_VAL]\
-                                                                    for i in range(0, 
-                                                                    transactions_length,
-                                                                    TRANSACTIONS_RAW_NUM_FILES)]
-    transactions_transformed_partitions = [TRANSACTIONS_TRANSFORM_NAME_FORMAT.format(i//TRANSACTIONS_TRANSFORM_NUM_FILES)[:REMOVE_PY_VAL] \
-                                                                    for i in range(0, 
-                                                                    transactions_length,
-                                                                    TRANSACTIONS_TRANSFORM_NUM_FILES)]
+    # # Extract the needed join scripts with transactions
+    # transactions_raw_partitions = [TRANSACTIONS_RAW_NAME_FORMAT.format(i//TRANSACTIONS_RAW_NUM_FILES)[:REMOVE_PY_VAL]\
+    #                                                                 for i in range(0, 
+    #                                                                 transactions_length,
+    #                                                                 TRANSACTIONS_RAW_NUM_FILES)]
+    transactions_raw_partitions = [TRANSACTIONS_RAW_COMMAND_FRMT.format(i, i+TRANSACTIONS_RAW_NUM_FILES) \
+                                   for i in range(0, transactions_length-TRANSACTIONS_TRANSFORM_NUM_FILES, TRANSACTIONS_RAW_NUM_FILES)]
+    # transactions_transformed_partitions = [TRANSACTIONS_TRANSFORM_NAME_FORMAT.format(i//TRANSACTIONS_TRANSFORM_NUM_FILES)[:REMOVE_PY_VAL] \
+    #                                                                 for i in range(0, 
+    #                                                                 transactions_length,
+    #                                                                 TRANSACTIONS_TRANSFORM_NUM_FILES)]
+    transactions_transformed_partitions = [TRANSACTIONS_TRANSFORM_COMMAND_FRMT.format(i, i+TRANSACTIONS_TRANSFORM_NUM_FILES) \
+                                   for i in range(0, transactions_length-TRANSACTIONS_TRANSFORM_NUM_FILES, TRANSACTIONS_TRANSFORM_NUM_FILES)]
 
     # Now make the complete run file
     run_file_text = []

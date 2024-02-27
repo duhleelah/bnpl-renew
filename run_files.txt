@@ -1,85 +1,210 @@
-python3 -m scripts.external_etl
-python3 -m scripts.make_partitioned_scripts
-python3 -m scripts.etl
-python3 -m scripts.internal_joins
-python3 -m scripts.transactions_raw_partition_0
-python3 -m scripts.transactions_raw_partition_1
-python3 -m scripts.transactions_raw_partition_2
-python3 -m scripts.transactions_raw_partition_3
-python3 -m scripts.transactions_raw_partition_4
-python3 -m scripts.transactions_raw_partition_5
-python3 -m scripts.transactions_raw_partition_6
-python3 -m scripts.transactions_raw_partition_7
-python3 -m scripts.transactions_raw_partition_8
-python3 -m scripts.transactions_raw_partition_9
-python3 -m scripts.transactions_raw_partition_10
-python3 -m scripts.transactions_raw_partition_11
-python3 -m scripts.transactions_raw_partition_12
-python3 -m scripts.transactions_transform_partition_0
-python3 -m scripts.transactions_transform_partition_1
-python3 -m scripts.transactions_transform_partition_2
-python3 -m scripts.transactions_transform_partition_3
-python3 -m scripts.transactions_transform_partition_4
-python3 -m scripts.transactions_transform_partition_5
-python3 -m scripts.transactions_transform_partition_6
-python3 -m scripts.transactions_transform_partition_7
-python3 -m scripts.transactions_transform_partition_8
-python3 -m scripts.transactions_transform_partition_9
-python3 -m scripts.transactions_transform_partition_10
-python3 -m scripts.transactions_transform_partition_11
-python3 -m scripts.transactions_transform_partition_12
-python3 -m scripts.transactions_transform_partition_13
-python3 -m scripts.transactions_transform_partition_14
-python3 -m scripts.transactions_transform_partition_15
-python3 -m scripts.transactions_transform_partition_16
-python3 -m scripts.transactions_transform_partition_17
-python3 -m scripts.transactions_transform_partition_18
-python3 -m scripts.transactions_transform_partition_19
-python3 -m scripts.transactions_transform_partition_20
-python3 -m scripts.transactions_transform_partition_21
-python3 -m scripts.transactions_transform_partition_22
-python3 -m scripts.transactions_transform_partition_23
-python3 -m scripts.transactions_transform_partition_24
-python3 -m scripts.transactions_transform_partition_25
-python3 -m scripts.transactions_transform_partition_26
-python3 -m scripts.transactions_transform_partition_27
-python3 -m scripts.transactions_transform_partition_28
-python3 -m scripts.transactions_transform_partition_29
-python3 -m scripts.transactions_transform_partition_30
-python3 -m scripts.transactions_transform_partition_31
-python3 -m scripts.transactions_transform_partition_32
-python3 -m scripts.transactions_transform_partition_33
-python3 -m scripts.transactions_transform_partition_34
-python3 -m scripts.transactions_transform_partition_35
-python3 -m scripts.transactions_transform_partition_36
-python3 -m scripts.transactions_transform_partition_37
-python3 -m scripts.transactions_transform_partition_38
-python3 -m scripts.transactions_transform_partition_39
-python3 -m scripts.transactions_transform_partition_40
-python3 -m scripts.transactions_transform_partition_41
-python3 -m scripts.transactions_transform_partition_42
-python3 -m scripts.transactions_transform_partition_43
-python3 -m scripts.transactions_transform_partition_44
-python3 -m scripts.transactions_transform_partition_45
-python3 -m scripts.transactions_transform_partition_46
-python3 -m scripts.transactions_transform_partition_47
-python3 -m scripts.transactions_transform_partition_48
-python3 -m scripts.transactions_transform_partition_49
-python3 -m scripts.transactions_transform_partition_50
-python3 -m scripts.transactions_transform_partition_51
-python3 -m scripts.transactions_transform_partition_52
-python3 -m scripts.transactions_transform_partition_53
-python3 -m scripts.transactions_transform_partition_54
-python3 -m scripts.transactions_transform_partition_55
-python3 -m scripts.transactions_transform_partition_56
-python3 -m scripts.transactions_transform_partition_57
-python3 -m scripts.transactions_transform_partition_58
-python3 -m scripts.transactions_transform_partition_59
-python3 -m scripts.transactions_transform_partition_60
-find . -name '*transactions_consumers*' -delete
-find . -name '*transactions_merchants*' -delete
-find . -name '*transactions_raw_partition*' -delete
-find . -name '*transactions_transform_partition*' -delete
-find . -name '*transactions_whole*' -delete
-find . -name '*transactions_distinct*' -delete
-find . -name '*transactions_ohe_small*' -delete
+python3 -m scripts.transactions_transform 0 3
+python3 -m scripts.transactions_transform 3 6
+python3 -m scripts.transactions_transform 6 9
+python3 -m scripts.transactions_transform 9 12
+python3 -m scripts.transactions_transform 12 15
+python3 -m scripts.transactions_transform 15 18
+python3 -m scripts.transactions_transform 18 21
+python3 -m scripts.transactions_transform 21 24
+python3 -m scripts.transactions_transform 24 27
+python3 -m scripts.transactions_transform 27 30
+python3 -m scripts.transactions_transform 30 33
+python3 -m scripts.transactions_transform 33 36
+python3 -m scripts.transactions_transform 36 39
+python3 -m scripts.transactions_transform 39 42
+python3 -m scripts.transactions_transform 42 45
+python3 -m scripts.transactions_transform 45 48
+python3 -m scripts.transactions_transform 48 51
+python3 -m scripts.transactions_transform 51 54
+python3 -m scripts.transactions_transform 54 57
+python3 -m scripts.transactions_transform 57 60
+python3 -m scripts.transactions_transform 60 63
+python3 -m scripts.transactions_transform 63 66
+python3 -m scripts.transactions_transform 66 69
+python3 -m scripts.transactions_transform 69 72
+python3 -m scripts.transactions_transform 72 75
+python3 -m scripts.transactions_transform 75 78
+python3 -m scripts.transactions_transform 78 81
+python3 -m scripts.transactions_transform 81 84
+python3 -m scripts.transactions_transform 84 87
+python3 -m scripts.transactions_transform 87 90
+python3 -m scripts.transactions_transform 90 93
+python3 -m scripts.transactions_transform 93 96
+python3 -m scripts.transactions_transform 96 99
+python3 -m scripts.transactions_transform 99 102
+python3 -m scripts.transactions_transform 102 105
+python3 -m scripts.transactions_transform 105 108
+python3 -m scripts.transactions_transform 108 111
+python3 -m scripts.transactions_transform 111 114
+python3 -m scripts.transactions_transform 114 117
+python3 -m scripts.transactions_transform 117 120
+python3 -m scripts.transactions_transform 120 123
+python3 -m scripts.transactions_transform 123 126
+python3 -m scripts.transactions_transform 126 129
+python3 -m scripts.transactions_transform 129 132
+python3 -m scripts.transactions_transform 132 135
+python3 -m scripts.transactions_transform 135 138
+python3 -m scripts.transactions_transform 138 141
+python3 -m scripts.transactions_transform 141 144
+python3 -m scripts.transactions_transform 144 147
+python3 -m scripts.transactions_transform 147 150
+python3 -m scripts.transactions_transform 150 153
+python3 -m scripts.transactions_transform 153 156
+python3 -m scripts.transactions_transform 156 159
+python3 -m scripts.transactions_transform 159 162
+python3 -m scripts.transactions_transform 162 165
+python3 -m scripts.transactions_transform 165 168
+python3 -m scripts.transactions_transform 168 171
+python3 -m scripts.transactions_transform 171 174
+python3 -m scripts.transactions_transform 174 177
+python3 -m scripts.transactions_transform 177 180
+python3 -m scripts.transactions_transform 180 183
+python3 -m scripts.transactions_transform 183 186
+python3 -m scripts.transactions_transform 186 189
+python3 -m scripts.transactions_transform 189 192
+python3 -m scripts.transactions_transform 192 195
+python3 -m scripts.transactions_transform 195 198
+python3 -m scripts.transactions_transform 198 201
+python3 -m scripts.transactions_transform 201 204
+python3 -m scripts.transactions_transform 204 207
+python3 -m scripts.transactions_transform 207 210
+python3 -m scripts.transactions_transform 210 213
+python3 -m scripts.transactions_transform 213 216
+python3 -m scripts.transactions_transform 216 219
+python3 -m scripts.transactions_transform 219 222
+python3 -m scripts.transactions_transform 222 225
+python3 -m scripts.transactions_transform 225 228
+python3 -m scripts.transactions_transform 228 231
+python3 -m scripts.transactions_transform 231 234
+python3 -m scripts.transactions_transform 234 237
+python3 -m scripts.transactions_transform 237 240
+python3 -m scripts.transactions_transform 240 243
+python3 -m scripts.transactions_transform 243 246
+python3 -m scripts.transactions_transform 246 249
+python3 -m scripts.transactions_transform 249 252
+python3 -m scripts.transactions_transform 252 255
+python3 -m scripts.transactions_transform 255 258
+python3 -m scripts.transactions_transform 258 261
+python3 -m scripts.transactions_transform 261 264
+python3 -m scripts.transactions_transform 264 267
+python3 -m scripts.transactions_transform 267 270
+python3 -m scripts.transactions_transform 270 273
+python3 -m scripts.transactions_transform 273 276
+python3 -m scripts.transactions_transform 276 279
+python3 -m scripts.transactions_transform 279 282
+python3 -m scripts.transactions_transform 282 285
+python3 -m scripts.transactions_transform 285 288
+python3 -m scripts.transactions_transform 288 291
+python3 -m scripts.transactions_transform 291 294
+python3 -m scripts.transactions_transform 294 297
+python3 -m scripts.transactions_transform 297 300
+python3 -m scripts.transactions_transform 300 303
+python3 -m scripts.transactions_transform 303 306
+python3 -m scripts.transactions_transform 306 309
+python3 -m scripts.transactions_transform 309 312
+python3 -m scripts.transactions_transform 312 315
+python3 -m scripts.transactions_transform 315 318
+python3 -m scripts.transactions_transform 318 321
+python3 -m scripts.transactions_transform 321 324
+python3 -m scripts.transactions_transform 324 327
+python3 -m scripts.transactions_transform 327 330
+python3 -m scripts.transactions_transform 330 333
+python3 -m scripts.transactions_transform 333 336
+python3 -m scripts.transactions_transform 336 339
+python3 -m scripts.transactions_transform 339 342
+python3 -m scripts.transactions_transform 342 345
+python3 -m scripts.transactions_transform 345 348
+python3 -m scripts.transactions_transform 348 351
+python3 -m scripts.transactions_transform 351 354
+python3 -m scripts.transactions_transform 354 357
+python3 -m scripts.transactions_transform 357 360
+python3 -m scripts.transactions_transform 360 363
+python3 -m scripts.transactions_transform 363 366
+python3 -m scripts.transactions_transform 366 369
+python3 -m scripts.transactions_transform 369 372
+python3 -m scripts.transactions_transform 372 375
+python3 -m scripts.transactions_transform 375 378
+python3 -m scripts.transactions_transform 378 381
+python3 -m scripts.transactions_transform 381 384
+python3 -m scripts.transactions_transform 384 387
+python3 -m scripts.transactions_transform 387 390
+python3 -m scripts.transactions_transform 390 393
+python3 -m scripts.transactions_transform 393 396
+python3 -m scripts.transactions_transform 396 399
+python3 -m scripts.transactions_transform 399 402
+python3 -m scripts.transactions_transform 402 405
+python3 -m scripts.transactions_transform 405 408
+python3 -m scripts.transactions_transform 408 411
+python3 -m scripts.transactions_transform 411 414
+python3 -m scripts.transactions_transform 414 417
+python3 -m scripts.transactions_transform 417 420
+python3 -m scripts.transactions_transform 420 423
+python3 -m scripts.transactions_transform 423 426
+python3 -m scripts.transactions_transform 426 429
+python3 -m scripts.transactions_transform 429 432
+python3 -m scripts.transactions_transform 432 435
+python3 -m scripts.transactions_transform 435 438
+python3 -m scripts.transactions_transform 438 441
+python3 -m scripts.transactions_transform 441 444
+python3 -m scripts.transactions_transform 444 447
+python3 -m scripts.transactions_transform 447 450
+python3 -m scripts.transactions_transform 450 453
+python3 -m scripts.transactions_transform 453 456
+python3 -m scripts.transactions_transform 456 459
+python3 -m scripts.transactions_transform 459 462
+python3 -m scripts.transactions_transform 462 465
+python3 -m scripts.transactions_transform 465 468
+python3 -m scripts.transactions_transform 468 471
+python3 -m scripts.transactions_transform 471 474
+python3 -m scripts.transactions_transform 474 477
+python3 -m scripts.transactions_transform 477 480
+python3 -m scripts.transactions_transform 480 483
+python3 -m scripts.transactions_transform 483 486
+python3 -m scripts.transactions_transform 486 489
+python3 -m scripts.transactions_transform 489 492
+python3 -m scripts.transactions_transform 492 495
+python3 -m scripts.transactions_transform 495 498
+python3 -m scripts.transactions_transform 498 501
+python3 -m scripts.transactions_transform 501 504
+python3 -m scripts.transactions_transform 504 507
+python3 -m scripts.transactions_transform 507 510
+python3 -m scripts.transactions_transform 510 513
+python3 -m scripts.transactions_transform 513 516
+python3 -m scripts.transactions_transform 516 519
+python3 -m scripts.transactions_transform 519 522
+python3 -m scripts.transactions_transform 522 525
+python3 -m scripts.transactions_transform 525 528
+python3 -m scripts.transactions_transform 528 531
+python3 -m scripts.transactions_transform 531 534
+python3 -m scripts.transactions_transform 534 537
+python3 -m scripts.transactions_transform 537 540
+python3 -m scripts.transactions_transform 540 543
+python3 -m scripts.transactions_transform 543 546
+python3 -m scripts.transactions_transform 546 549
+python3 -m scripts.transactions_transform 549 552
+python3 -m scripts.transactions_transform 552 555
+python3 -m scripts.transactions_transform 555 558
+python3 -m scripts.transactions_transform 558 561
+python3 -m scripts.transactions_transform 561 564
+python3 -m scripts.transactions_transform 564 567
+python3 -m scripts.transactions_transform 567 570
+python3 -m scripts.transactions_transform 570 573
+python3 -m scripts.transactions_transform 573 576
+python3 -m scripts.transactions_transform 576 579
+python3 -m scripts.transactions_transform 579 582
+python3 -m scripts.transactions_transform 582 585
+python3 -m scripts.transactions_transform 585 588
+python3 -m scripts.transactions_transform 588 591
+python3 -m scripts.transactions_transform 591 594
+python3 -m scripts.transactions_transform 594 597
+python3 -m scripts.transactions_transform 597 600
+python3 -m scripts.transactions_transform 600 603
+python3 -m scripts.sa2_age_allocation
+find -type f -name '*transactions_consumers*' -delete
+find -type f -name '*transactions_merchants*' -delete
+find -type f -name '*transactions_raw_partition*' -delete
+find -type f -name '*transactions_transform_partition*' -delete
+find -type f -name '*transactions_whole*' -delete
+find -type f -name '*transactions_distinct*' -delete
+find -type f -name '*transactions_ohe_small*' -delete
+find -type f -name '*transactions_batch*' -delete
